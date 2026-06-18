@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Doubly Robust Estimation under High-Dimensional Confounding",
+    "authors": "Doe, J., Martin, A., & Leblanc, C.",
+    "year": 2024,
+    "venue": "Annals of Statistics, 52(3), 1124–1158",
+    "type": "Journal",
+    "doi": "10.1214/24-AOS2401",
+    "preprint": "https://arxiv.org/abs/2401.00001",
+    "code": "https://github.com/janedoe/drml",
+    "keywords": ["causal inference", "high-dimensional", "semiparametric"]
+  },
+  {
+    "title": "Scalable Causal Discovery via Sparse Regularisation",
+    "authors": "Doe, J. & Chen, L.",
+    "year": 2024,
+    "venue": "arXiv preprint",
+    "type": "Preprint",
+    "preprint": "https://arxiv.org/abs/2404.00004",
+    "keywords": ["causal discovery", "LASSO", "DAGs"]
+  },
+  {
+    "title": "Survival Analysis with Latent Heterogeneity",
+    "authors": "Doe, J. & Nguyen, T.",
+    "year": 2023,
+    "venue": "Journal of the Royal Statistical Society (B), 85(2), 412–436",
+    "type": "Journal",
+    "doi": "10.1111/rssb.12500",
+    "preprint": "https://arxiv.org/abs/2301.00002",
+    "keywords": ["survival analysis", "latent variables", "EM algorithm"]
+  },
+  {
+    "title": "Fast Inference for Causal Effects in Randomised Trials",
+    "authors": "Doe, J., Petit, R., & Garcia, M.",
+    "year": 2023,
+    "venue": "NeurIPS 2023",
+    "type": "Conference",
+    "preprint": "https://arxiv.org/abs/2306.00003",
+    "code": "https://github.com/janedoe/fast-rct",
+    "keywords": ["randomised trials", "efficiency", "machine learning"]
+  },
+  {
+    "title": "Nonparametric Testing for Treatment Effect Heterogeneity",
+    "authors": "Doe, J.",
+    "year": 2022,
+    "venue": "Electronic Journal of Statistics, 16(1), 230–275",
+    "type": "Journal",
+    "doi": "10.1214/22-EJS2000",
+    "keywords": ["heterogeneous treatment effects", "hypothesis testing"]
+  }
+]
