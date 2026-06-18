@@ -162,64 +162,62 @@
     .filter-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
 
     #pub-list { display: flex; flex-direction: column; gap: 0; }
-
-    .pub-item {
-      padding: 22px 0;
-      border-bottom: 1px solid var(--rule);
-      display: grid;
-      grid-template-columns: 52px 1fr;
-      gap: 0 20px;
-    }
-    .pub-year {
-      font-size: 1.1rem; font-weight: 500;
-      color: var(--ink-light);
-      padding-top: 3px;
-      font-variant-numeric: tabular-nums;
-    }
-    .pub-body {}
-    .pub-title {
-      font-size: 1.38rem;
-      font-weight: 500;
-      line-height: 1.35;
-      color: var(--ink);
-      margin-bottom: 4px;
-    }
-    .pub-title a { color: inherit; text-decoration: none; }
-    .pub-title a:hover { color: var(--accent); }
-    .pub-authors {
-      font-size: 0.1rem; color: var(--ink-light);
-      margin-bottom: 4px;
-    }
-    .pub-venue {
-      font-size: .83rem;
-      font-style: italic;
-      color: var(--ink-light);
-      margin-bottom: 8px;
-    }
-    .pub-tags { display: flex; gap: 6px; flex-wrap: wrap; }
-    .pub-tag {
-      font-size: .68rem; font-weight: 500;
-      letter-spacing: .05em; text-transform: uppercase;
-      padding: 2px 8px;
-      background: var(--tag-bg); color: var(--tag-txt);
-      border-radius: 2px;
-    }
-    .pub-links { display: flex; gap: 10px; margin-top: 8px; }
-    .pub-links a {
-      font-size: .75rem; font-weight: 500;
-      color: var(--accent); text-decoration: none;
-      letter-spacing: .03em;
-    }
-    .pub-links a:hover { text-decoration: underline; }
-
-    .pub-empty {
-      padding: 40px 0; text-align: center;
-      color: var(--ink-light); font-size: .9rem;
-    }
-    .pub-status {
-      font-size: .75rem; color: var(--ink-light);
-      margin-bottom: 16px;
-    }
+.pub-item {
+  padding: 22px 0;
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 52px 1fr;
+  gap: 0 20px;
+}
+.pub-year {
+  font-size: 1rem; font-weight: 500;
+  color: var(--ink-light);
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.pub-body {}
+.pub-title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.pub-title a { color: inherit; text-decoration: none; }
+.pub-title a:hover { color: var(--accent); }
+.pub-authors {
+  font-size: 1rem; color: var(--ink-light);
+  margin-bottom: 4px;
+}
+.pub-venue {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--ink-light);
+  margin-bottom: 8px;
+}
+.pub-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+.pub-tag {
+  font-size: .85rem; font-weight: 500;
+  letter-spacing: .05em; text-transform: uppercase;
+  padding: 2px 8px;
+  background: var(--tag-bg); color: var(--tag-txt);
+  border-radius: 2px;
+}
+.pub-links { display: flex; gap: 10px; margin-top: 8px; }
+.pub-links a {
+  font-size: .9rem; font-weight: 500;
+  color: var(--accent); text-decoration: none;
+  letter-spacing: .03em;
+}
+.pub-links a:hover { text-decoration: underline; }
+.pub-empty {
+  padding: 40px 0; text-align: center;
+  color: var(--ink-light); font-size: 1rem;
+}
+.pub-status {
+  font-size: .85rem; color: var(--ink-light);
+  margin-bottom: 16px;
+}
 
     /* ── Research interests ─────────────────────────────────────── */
     .interests { display: flex; flex-wrap: wrap; gap: 10px; }
@@ -440,11 +438,10 @@ function renderPubs(pubs) {
       `<span class="pub-tag">${k}</span>`
     ).join('');
 
-    const links = [];
-    if (p.doi)     links.push(`<a href="https://doi.org/${p.doi}" target="_blank">DOI</a>`);
-    if (p.preprint)links.push(`<a href="${p.preprint}" target="_blank">Preprint</a>`);
-    if (p.code)    links.push(`<a href="${p.code}" target="_blank">Code</a>`);
-    if (p.pdf)     links.push(`<a href="${p.pdf}" target="_blank">PDF</a>`);
+const links = [];
+if (p.preprint) links.push(`<a href="${p.preprint}" target="_blank">Preprint</a>`);
+if (p.code)     links.push(`<a href="${p.code}" target="_blank">Code</a>`);
+if (p.pdf)      links.push(`<a href="${p.pdf}" target="_blank">PDF</a>`);
 
     const titleEl = p.doi
       ? `<a href="https://doi.org/${p.doi}" target="_blank">${p.title}</a>`
