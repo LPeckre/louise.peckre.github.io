@@ -418,7 +418,12 @@ function filterPubs() {
 }
 
 // ── Render pub list ─────────────────────────────────────────────
-function renderPubs(pubs) {
+function highlightAuthor(authors, myName) {
+  if (!authors) return '';
+  return authors.replace(myName, `<span style="text-decoration: underline;">${myName}</span>`);
+}
+  function renderPubs(pubs) {
+  const MY_NAME = "Peckre, L."; 
   const list = document.getElementById('pub-list');
   const status = document.getElementById('pub-status');
 
@@ -451,7 +456,7 @@ if (p.pdf)      links.push(`<a href="${p.pdf}" target="_blank">PDF</a>`);
       <span class="pub-year">${p.year || '—'}</span>
       <div class="pub-body">
         <div class="pub-title">${titleEl}</div>
-        <div class="pub-authors">${p.authors || ''}</div>
+        <div class="pub-authors">${highlightAuthor(p.authors, MY_NAME)}</div>
         <div class="pub-venue">${p.venue || ''}</div>
         ${tags ? `<div class="pub-tags">${tags}</div>` : ''}
         ${links.length ? `<div class="pub-links">${links.join('')}</div>` : ''}
